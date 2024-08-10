@@ -1,4 +1,5 @@
 from my_math import power
+from tola import *
 
 print("Greetings human")
 print("This application calculates power of inputted number")
