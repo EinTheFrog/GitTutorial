@@ -11,19 +11,26 @@ Parts of the commands that are put in square brackets you need to change yoursel
 ### Status Commands  
 `git status` - check the status of the project (current branch, changes)  
 `git branch` - check branches of the project  
+`git log --oneline` - show history of commits  
 
 ### Branch Commands
 Branch names CANNOT have spaces. Use underscores instead. For example, branch can be called _new_feature_ but cannot be called _new feature_.  
 
 `git checkout [branch_name]` - go to an existing branch  
 `git checkout -b [branch_name]` - go to a new branch  
-`git branch -d [branch_name] ` - delete branch
+`git branch -d [branch_name] ` - delete branch  
 
 ### Commit Commands
 
 `git add [file names]` - select changes to commit  
-`git add *` - select all changes to commit
+`git add *` - select all changes to commit  
 `git commit -m "[Commit description]"` - make a commit  
+
+### Cancel Commands
+`git restore --staged [file names]` - unselect changes to commit  
+`git restore --staged .` - unselect all changes to commit  
+`git restore [file names]` - cancel all changes done to mentioned file names after the last commit  
+`git restore .` - cancel all changes and roll back to the last commit (all changes done after last commit will be lost)  
 
 ### Remote Commands
 Commands below are used to communicate with remote repository (GitHub)  
